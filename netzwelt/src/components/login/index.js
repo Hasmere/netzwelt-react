@@ -34,7 +34,6 @@ const Login = props => {
       history('/');
     }).catch(error => {
       setLoading(false);
-      console.log(error);
       if (error.response && error.response.status === 404) {
         setError(error.response.data.message);
       } else {
