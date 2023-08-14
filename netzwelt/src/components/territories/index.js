@@ -6,7 +6,10 @@ import './Territories.css';
 const Territories = () => {
   const [territoriesData, setTerritoriesData] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  
+  // Remove https://cors-anywhere.herokuapp.com/ in URL if CORS is accepted in backend server
+  // https://cors-anywhere.herokuapp.com/ is used to bypass CORS error
+  // Request temporary access for CORS here: https://cors-anywhere.herokuapp.com/corsdemo
   useEffect(() => {
     axios.get('https://cors-anywhere.herokuapp.com/https://netzwelt-devtest.azurewebsites.net/Territories/All', {
       headers: {

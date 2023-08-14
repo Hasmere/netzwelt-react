@@ -18,7 +18,10 @@ const Login = props => {
       username: username.value,
       password: password.value
     };
-  
+    
+    // Remove https://cors-anywhere.herokuapp.com/ in URL if CORS is accepted in backend server
+    // https://cors-anywhere.herokuapp.com/ is used to bypass CORS error
+    // Request temporary access for CORS here: https://cors-anywhere.herokuapp.com/corsdemo
     axios.post(
       'https://cors-anywhere.herokuapp.com/https://netzwelt-devtest.azurewebsites.net/Account/SignIn',
       requestData,
