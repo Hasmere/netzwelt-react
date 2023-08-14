@@ -51,7 +51,7 @@ const Territories = () => {
       <ul>
         {children.map(child => (
           <li key={child.id} className={checkChildren(data, child.id) ? 'collapsible' : 'non-collapsible'}>
-            <a className="text-dark text-decoration-none" onClick={toggleCollapsible}> { child.name } </a>
+            <a href="#/" className="text-dark text-decoration-none" onClick={toggleCollapsible}> { child.name } </a>
            
             { buildNestedList(data, child.id) }
           </li>

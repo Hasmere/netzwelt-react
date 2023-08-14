@@ -14,7 +14,7 @@ const NavigationBar = props => {
     return (
       <nav className="navbar navbar-dark bg-dark">
         <div className="container-fluid">
-          <a className="navbar-brand">Netzwelt</a>
+          <a href="/#" className="navbar-brand">Netzwelt</a>
           <div className="d-flex">
             <span className="text-light me-3 my-auto">Hi, { user }!</span>
             <input type="button" className="btn btn-light" onClick={handleLogout} value="Logout" />
