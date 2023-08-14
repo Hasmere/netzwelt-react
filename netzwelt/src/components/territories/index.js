@@ -1,23 +1,12 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { getDisplayName, removeUserSession } from '../../utils/common';
- 
-const Dashboard = props => {
-  const history = useNavigate();
-  const user = getDisplayName();
- 
-  // handle click event of logout button
-  const handleLogout = () => {
-    removeUserSession();
-    history('/login');
-  }
- 
+import NavigationBar from '../navigationBar';
+
+const Territories = props => {
   return (
     <div>
-      Welcome {user}!<br /><br />
-      <input type="button" onClick={handleLogout} value="Logout" />
+      <NavigationBar />
     </div>
   );
 }
  
-export default Dashboard;
+export default Territories;
