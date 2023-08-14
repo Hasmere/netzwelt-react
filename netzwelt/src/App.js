@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
  
 import PrivateRoutes from './utils/privateRoutes';
 import PublicRoutes from './utils/publicRoutes';
@@ -26,10 +26,11 @@ function App() {
       <Routes>
         <Route path="*" element={<NotFound />} />
         <Route element={<PublicRoutes />}>
-          <Route path="/login" element={<Login />} />
+          <Route path="/account/login" element={<Login />} />
         </Route>
         <Route element={<PrivateRoutes />}>
-          <Route index element={<Territories />} />
+          <Route path="/" element={<Navigate to="/home/index" />} />
+          <Route path="/home/index" element={<Territories />} />
         </Route>
       </Routes>
     </BrowserRouter>

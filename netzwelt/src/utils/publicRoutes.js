@@ -4,7 +4,7 @@ import { getUser } from './common';
  
 // handle the public routes
 const PublicRoutes = () => {
-  return !getUser() ? <Outlet /> : <Navigate to="/" />
+  return !getUser() ? <Outlet /> : <Navigate to="/home/index" />
 }
  
 export default PublicRoutes;

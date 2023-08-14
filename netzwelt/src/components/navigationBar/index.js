@@ -8,7 +8,7 @@ const NavigationBar = props => {
 
     const handleLogout = () => {
       removeUserSession();
-      history('/login');
+      history('/account/login');
     }
    
     return (
